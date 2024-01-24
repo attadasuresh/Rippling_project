@@ -1,13 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar1 from './components/Navbar1';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
    <>
-   <h1>hello</h1>
-   <p>hkjhksdf</p>
-   <h1>new</h1>
-   
+   <Navbar1/>
+
+
    </>
   );
 }
