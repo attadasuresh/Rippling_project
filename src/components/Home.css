@@ -59,29 +59,55 @@
     text-align: center;
 }
 .card7{
-    background-color: aqua;
+    background-color: transparent;
+   padding-left: 60px;
+}
+.card71{
+    background-color: transparent;
+    padding-left: 50px;
 }
 .img3{
     height:40px;
+   margin: 10px;
+
 }
 .card8{
-    background-color: chartreuse;
-    width:380px;
+    background-color:rgb(90, 25, 151);
+    width:350px;
+    border-radius: 10px;
+   padding-left: 30px;
+   color: white;
+   
+    
 }
 .para8{
     font-size: 14px;
    width: 300px;
+   margin: 10px;
+
 }
 
 .img5{
     height:30px;
     width:30px;
+    
 }
 .card9{
-    background-color:rgb(159, 187, 241);
-    width: 110px;
+    background-color:rgb(74, 201, 240);
+    width: 130px;
     height: 45px;
-   justify-content: center;
    padding-top: 10px;
    border-radius: 10px;
+   margin: 10px;
+   padding-left: 5px;
+
+}
+.card91{
+    background-color:rgb(74, 201, 240);
+    width: 250px;
+    height: 45px;
+   padding-top: 10px;
+   padding-left: 20px;
+   border-radius: 10px;
+   margin: 10px;
 }
