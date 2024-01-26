@@ -26,7 +26,7 @@ const Navbar1 = () => {
     <div>
     <Navbar collapseOnSelect expand="lg" style={{backgroundColor:"#0088cc"}}>
       <Container>
-        <Navbar.Brand href="#home"  as={Link}to={"/Home"}> <span style={{color:"white",fontWeight:"bold"}}> Seamless-Staff-Hub </span></Navbar.Brand>
+        <Navbar.Brand href="#home"  as={Link}to={"/Home"}><img style={{height:"50px",borderRadius:"10px"}} src="images\empConcorlogo.png"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
 

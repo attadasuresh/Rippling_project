@@ -6,9 +6,10 @@ const Footer = () => {
   <>
   <div className='bg1'>
     <div className='d-flex flex-row card1' >
-    <p className='logo'>Logo</p>
-    <p className='para1'>Sign up for a free demo to see <br/>Rippling in action</p>
-    <div className='card2'>
+    
+    <p className='logo'><img style={{height:"50px",borderRadius:"10px"}} src="images\empConcorlogo.png"/></p>
+    <p className='para1'>Sign up for a free demo to see Emp Concor in action</p>
+    <div className='card22'>
     <input type="text" placeholder='   Enter Your Email' className='input'/>
     <button className='button'> Submit</button>
 </div>
@@ -17,7 +18,7 @@ const Footer = () => {
     <div>
 <h1 className='head2'>PLATFORM</h1>
  <ul className='para5'>
-    <p>Rippling Overview</p>
+    <p>Emp Concor Overview</p>
      <p>Custom Workflows</p>
     <p>Workforce Analytics</p>
     <p>Policy Management</p>
