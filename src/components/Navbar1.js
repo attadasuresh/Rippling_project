@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Pricing from './Pricing';
 import Features from './Features';
-import Products from './Products';
+import Hr from './Hr';
 import Customers from './Customers';
 import Resources from './Resources';
 import Login from './Login';
@@ -34,15 +34,15 @@ const Navbar1 = () => {
 
 
           <span  style={{ marginLeft:"50px",fontSize:"20px",fontWeight:"bold",fontFamily:"roboto"}}><NavDropdown  title= <span className='tittle1'>Products </span> id="collapsible-nav-dropdown">
-              <NavDropdown.Item as={Link}to={"/Products"}>
-               Products</NavDropdown.Item>
+              <NavDropdown.Item as={Link}to={"/Hr"}>
+          <span className='span20'>HR CLOUD</span></NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+              <span className='span20'>IT CLOUD</span>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3"><span className='span20'>FINANCE CLOUD</span></NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+               ABOUT
               </NavDropdown.Item>
             </NavDropdown></span>
 
@@ -105,8 +105,8 @@ const Navbar1 = () => {
           <Route path="/Home">
             <Home />
           </Route>
-          <Route path="/Products">
-            <Products />
+          <Route path="/Hr">
+            <Hr/>
           </Route>
           <Route path="/Pricing">
             <Pricing />

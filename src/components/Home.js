@@ -113,15 +113,12 @@ const Home = () => {
 <div className='d-flex flex-row'>
 
 <div className='d-flex flex-row card91' >
-
     <img className='img5' src="images\debit-credit-card-icon.webp"/>
     <p style={{paddingLeft:"10px",fontWeight:"bold"}}>Corporate Cards</p>
 
 </div>
-
 </div>
 <div className='d-flex flex-row'>
-
 <div className='d-flex flex-row card91' >
 <img className='img5' src="images\hand-holding-us-dollar-icon-2048x1820-v2wgzoyq.png"/>
     <p style={{paddingLeft:"10px",fontWeight:"bold"}}>Expense Management</p>
@@ -226,7 +223,6 @@ const Home = () => {
     </Carousel>
 </div>
 </div>
-
 <div className='bg7 d-flex'>
 <div className='card17'>
 <img  style={{height:"50px"}} src="images\4502163.png"/>
