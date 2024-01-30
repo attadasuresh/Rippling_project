@@ -12,6 +12,7 @@ import Customers from './Customers';
 import Resources from './Resources';
 import Login from './Login';
 import Home from './Home';
+import It from './It';
 import {
     BrowserRouter as Router,
     Switch,
@@ -36,7 +37,7 @@ const Navbar1 = () => {
           <span  style={{ marginLeft:"50px",fontSize:"20px",fontWeight:"bold",fontFamily:"roboto"}}><NavDropdown  title= <span className='tittle1'>Products </span> id="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link}to={"/Hr"}>
           <span className='span20'>HR CLOUD</span></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item as={Link}to={"/It"}>
               <span className='span20'>IT CLOUD</span>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3"><span className='span20'>FINANCE CLOUD</span></NavDropdown.Item>
@@ -108,13 +109,15 @@ const Navbar1 = () => {
           <Route path="/Hr">
             <Hr/>
           </Route>
+          <Route path="/It">
+            <It/>
+          </Route>
           <Route path="/Pricing">
             <Pricing />
           </Route>
           <Route path="/Features">
             <Features />
           </Route>
-
           <Route path="/Customers">
             <Customers />
           </Route>

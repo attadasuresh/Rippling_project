@@ -23,7 +23,6 @@ const Hr = () => {
        </div>
        <img className='hr-img1' src="images\Core-HR.png"/>
        </div>
-
        <div className='hr-card5'>
 <h1 className='hr-para55'>OVERVIEW</h1>
 <h1 className='hr-head5'>All your HR. One global HR platform.</h1>
@@ -40,14 +39,10 @@ const Hr = () => {
         <Col xs={6} md={4}>
           <Image style={{height:"100px"}} src="images\EI-icon2048.webp" roundedCircle />
           <p className='hr-p2'>Employee Changes</p>
-
-
         </Col>
         <Col xs={6} md={4}>
           <Image style={{height:"100px"}} src="images\10261202__1_-removebg-preview.png" roundedCircle  />
           <p className='hr-p1'>Offboarding</p>
-
-
         </Col>
       </Row>
     </Container>
