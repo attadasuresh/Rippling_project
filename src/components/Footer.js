@@ -7,7 +7,7 @@ const Footer = () => {
   <div className='bg1'>
     <div className='d-flex flex-row card1' >
     
-    <p className='logo'><img style={{height:"50px",borderRadius:"10px"}} src="images\empConcorlogo.png"/></p>
+    <p className='logo'><img style={{height:"50px",borderRadius:"10px"}} src="images\image_2024_01_31T20_17_18_633Z.png"/></p>
     <p className='para1'>Sign up for a free demo to see Emp Concor in action</p>
     <div className='card22'>
     <input type="text" placeholder='   Enter Your Email' className='input'/>

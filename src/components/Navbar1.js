@@ -13,6 +13,7 @@ import Resources from './Resources';
 import Login from './Login';
 import Home from './Home';
 import It from './It';
+import Finance from './Finance';
 import {
     BrowserRouter as Router,
     Switch,
@@ -27,7 +28,7 @@ const Navbar1 = () => {
     <div>
     <Navbar collapseOnSelect expand="lg" style={{backgroundColor:"#0088cc"}}>
       <Container>
-        <Navbar.Brand href="#home"  as={Link}to={"/Home"}><img style={{height:"50px",borderRadius:"10px"}} src="images\empConcorlogo.png"/></Navbar.Brand>
+        <Navbar.Brand href="#home"  as={Link}to={"/Home"}><img style={{height:"50px",borderRadius:"10px"}} src="images\image_2024_01_31T20_17_18_633Z.png"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
 
@@ -40,7 +41,7 @@ const Navbar1 = () => {
               <NavDropdown.Item as={Link}to={"/It"}>
               <span className='span20'>IT CLOUD</span>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3"><span className='span20'>FINANCE CLOUD</span></NavDropdown.Item>
+              <NavDropdown.Item as={Link}to={"/Finance"}><span className='span20'>FINANCE CLOUD</span></NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                ABOUT
@@ -111,6 +112,9 @@ const Navbar1 = () => {
           </Route>
           <Route path="/It">
             <It/>
+          </Route>
+          <Route path="/Finance">
+            <Finance/>
           </Route>
           <Route path="/Pricing">
             <Pricing />
