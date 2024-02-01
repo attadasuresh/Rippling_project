@@ -11,7 +11,9 @@ const Home = () => {
        <h1 className='head1'>Magically Simplify <br/>HR, IT, and Finance</h1>
        <p className='para2'>Emp Concor lets you easily manage your employees’<br/> payroll, benefits, expenses, devices, apps & more—in one place.</p>
       <input type="text" className='inputbox' placeholder='   Enter Your Email Address'/><br/>
+       <a href='Register'>
        <button className='button1'>Submit</button>
+       </a>
        <p className='para3'>By clicking "Submit" you agree to Emp Concor Privacy Notice</p>
        </div>
        <img className='img1' src="images\Recruitment.png"/>

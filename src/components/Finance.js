@@ -171,8 +171,6 @@ const Finance = () => {
   <h1 className='it-head10'>Unify your finance data</h1>
   <p className='Fn-para10' style={{marginLeft:"20px"}}>Rippling brings all the employee data scattered across your finance stack into one place.</p>
 </div>
-
-
 </div>
     </>
   )

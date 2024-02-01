@@ -14,6 +14,7 @@ import Login from './Login';
 import Home from './Home';
 import It from './It';
 import Finance from './Finance';
+import Register from './Register';
 import {
     BrowserRouter as Router,
     Switch,
@@ -72,7 +73,7 @@ const Navbar1 = () => {
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item   as={Link}to={"/Register"}>Register</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link
@@ -109,6 +110,9 @@ const Navbar1 = () => {
           </Route>
           <Route path="/Hr">
             <Hr/>
+          </Route>
+          <Route path="/Register">
+            <Register/>
           </Route>
           <Route path="/It">
             <It/>
