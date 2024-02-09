@@ -75,10 +75,6 @@ const Employe = () => {
         <button className='Ep-button1'>SENT MAIL</button>
         <button className='Ep-button1' onClick={ e => handleSubmit (data.id)}>DELETE</button>
           </li>
-
-      
-       
-      
       
       ))
     }

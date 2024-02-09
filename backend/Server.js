@@ -3,6 +3,7 @@ const cors = require ("cors");
 const mysql = require ("mysql");
 
 
+
 const app = express();
 
 app.use(express.json());
@@ -26,9 +27,8 @@ app.get("/",(req,res)=>{
     return res.json(data);
  
     })
-
 })
- 
+
 
 
 app.delete('/student/:id',(req,res)=>{
@@ -40,6 +40,27 @@ app.delete('/student/:id',(req,res)=>{
     return res.json(data);
     })
 })
+
+
+
+app.post('/login',(req,res)=>{
+    const {email,password} = req.body
+   const sql = `SELECT * FROM  admin WHERE email = '${email}'` 
+
+   db.query(sql,(err,data)=>{
+    if(data.length===0){
+        res.json(false)
+    }else{
+        if(data[0].password===password){
+            res.json(true)
+        }else{
+
+            res.json(false)
+        }
+    }})
+   
+})
+
 
 
 app.post('/create',(req,res) =>{

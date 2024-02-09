@@ -16,6 +16,8 @@ import It from './It';
 import Finance from './Finance';
 import Register from './Register';
 import Employe from './Employe';
+import Admin from './Admin';
+import Protect from './Protect';
 import {
     BrowserRouter as Router,
     Switch,
@@ -90,8 +92,8 @@ const Navbar1 = () => {
               </NavDropdown.Item>
               <NavDropdown.Item as={Link}to={"/Employe"}>Employe</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
+              <NavDropdown.Item as={Link}to={"/Admin"}>
+              Admin
               </NavDropdown.Item>
             </NavDropdown>
             </span>
@@ -106,12 +108,8 @@ const Navbar1 = () => {
     </div>
     <div>
     <Switch>
-          <Route path="/Home">
-            <Home />
-          </Route>
-          <Route path="/Hr">
-            <Hr/>
-          </Route>
+          <Route path="/Home" component={Home} />
+          <Route path="/Hr" component={Hr}/>
           <Route path="/Register">
             <Register/>
           </Route>
@@ -133,12 +131,12 @@ const Navbar1 = () => {
           <Route path="/Resources">
             <Resources />
           </Route>
-          <Route path="/Login">
-            <Login/>
+          <Route path="/Login" component={Login}/>
+          <Protect path="/Employe" component={Employe}/>
+          <Route path="/Admin">
+            <Admin/>
           </Route>
-          <Route path="/Employe">
-            <Employe/>
-          </Route>
+          
         </Switch>
     </div>
     </Router>
