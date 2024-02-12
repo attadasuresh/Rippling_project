@@ -76,8 +76,6 @@ const values =[
     req.body.email,
     req.body.Contactnumber,
     req.body.Howknow,
-
-
 ]
 
 db.query(sql,[values],(err,data)=>{
@@ -86,6 +84,48 @@ db.query(sql,[values],(err,data)=>{
     return res.json(data);
 })
 
+
+})
+
+
+
+
+
+
+app.post('/hrlog',(req,res)=>{
+    const {email,password} = req.body
+   const sql = `SELECT * FROM  hr WHERE email = '${email}'` 
+
+   db.query(sql,(err,data)=>{
+    if(data.length===0){
+        res.json(false)
+    }else{
+        if(data[0].password===password){
+            res.json(true)
+        }else{
+
+            res.json(false)
+        }
+    }})
+   
+})
+
+
+app.post('/hr',(req,res)=>{
+    const sql = "INSERT INTO hr  (`name`,`email`,`password`,`company`) VALUES (?)";
+
+    const values =[
+
+        req.body.name,
+        req.body.email,
+        req.body.password,
+        req.body.company,
+    ]
+    db.query(sql,[values],(err,data)=>{
+
+        if (err) return res.json(err);
+        return res.json(data);
+    })
 
 })
 

@@ -30,7 +30,9 @@ const Employe = () => {
 <>
 
 <div>
+  <a href='admin'>
    <h1 className=' Ep-head3'>DASHBOARD</h1>
+   </a>
 
 <div className='d-flex flex-row'>
 

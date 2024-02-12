@@ -18,6 +18,8 @@ import Register from './Register';
 import Employe from './Employe';
 import Admin from './Admin';
 import Protect from './Protect';
+import Hrlogin from './Hrlogin'
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -87,8 +89,8 @@ const Navbar1 = () => {
             <span style={{marginLeft:"30px",fontSize:"20px",fontWeight:"bold",fontFamily:"roboto"}}>
             <NavDropdown  title= <span className='tittle1'>Resources </span>     id="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link}to={"/Resources"}>Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
+              <NavDropdown.Item  as={Link}to={"/Hrlogin"}>
+              Hrlogin
               </NavDropdown.Item>
               <NavDropdown.Item as={Link}to={"/Employe"}>Employe</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -131,6 +133,8 @@ const Navbar1 = () => {
           <Route path="/Resources">
             <Resources />
           </Route>
+
+          <Route path="/Hrlogin" component={Hrlogin}/>
           <Route path="/Login" component={Login}/>
           <Protect path="/Employe" component={Employe}/>
           <Route path="/Admin">
