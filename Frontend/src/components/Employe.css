@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
   
-  padding: 30px;
+    padding: 30px;
     border: 2px solid  black;
     border-radius: 10px;
     margin-right: 15px;
@@ -29,13 +29,34 @@
 
 
 }
+
+.Ep-button12{
+    height:30px;
+    width: 50px;
+  
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(78, 78, 201);
+}
+
+.Ep-button12:hover{
+    background-color: gold;
+
+
+}
+.ep-checkbox1{
+  height: 20px;
+  width: 20px;
+}
+
 .Ep-card1{
     background-color: gold;
     width:280px;
-    height: 90px;
+   
     border-radius: 10px;
     justify-items: center;
     margin:30px;
+   
     
     
 }

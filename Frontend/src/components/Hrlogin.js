@@ -3,6 +3,7 @@ import './Hrlogin.css';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
+
 const Hrlogin = (props) => {
 
   const {history} = props
@@ -33,8 +34,8 @@ if(res.data){
 
     <>
     
-    <form  className='Hl-card1 d-flex flex-row' onSubmit={submithandler} >
-        <div className='Ln-card21'> 
+    <form  className='Hl-card1 d-flex flex-row' onSubmit={submithandler}  >
+        <div className='Ln-card21' > 
        <h1 className='Ln-head1' style={{paddingLeft:"40px"}}>HR LOGIN</h1> 
       <input type="text" className='Ln-inputbox' placeholder='   Enter Your Email'    onChange={ e => setEmail(e.target.value) } /><br/>
       <input type="password" className='Ln-inputbox' placeholder='   Enter Your Password'   onChange={ e => setPassword(e.target.value) }  /><br/>

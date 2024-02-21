@@ -19,6 +19,9 @@ import Employe from './Employe';
 import Admin from './Admin';
 import Protect from './Protect';
 import Hrlogin from './Hrlogin'
+import EmployeRegister from './EmployeRegister'
+import Hremploye from './Hremploye'
+
 
 import {
     BrowserRouter as Router,
@@ -87,12 +90,16 @@ const Navbar1 = () => {
             </span>
 
             <span style={{marginLeft:"30px",fontSize:"20px",fontWeight:"bold",fontFamily:"roboto"}}>
-            <NavDropdown  title= <span className='tittle1'>Resources </span>     id="collapsible-nav-dropdown">
+            <NavDropdown  title= <span className='tittle1'>HR LOGIN</span>     id="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link}to={"/Resources"}>Action</NavDropdown.Item>
               <NavDropdown.Item  as={Link}to={"/Hrlogin"}>
               Hrlogin
               </NavDropdown.Item>
               <NavDropdown.Item as={Link}to={"/Employe"}>Employe</NavDropdown.Item>
+              <NavDropdown.Item as={Link}to={"/EmployeRegister"}>EmployeRegister</NavDropdown.Item>
+              <NavDropdown.Item as={Link}to={"/Hremploye"}>Hremploye</NavDropdown.Item>
+
+
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link}to={"/Admin"}>
               Admin
@@ -100,9 +107,12 @@ const Navbar1 = () => {
             </NavDropdown>
             </span>
 
-            <Nav.Link style={{marginLeft:"50px",fontSize:"20px",fontWeight:"bold",fontFamily:"roboto"}} as={Link}to={"/Login"} >  <span className='tittle1'>Login </span>  </Nav.Link>    
+
+            <Nav.Link style={{marginLeft:"50px",fontSize:"20px",fontWeight:"bold",fontFamily:"roboto"}} as={Link}to={"/Login"} >    <span className='tittle1'>Login </span>  </Nav.Link>
+
 
           </Nav>
+          
        
         </Navbar.Collapse>
       </Container>
@@ -137,6 +147,10 @@ const Navbar1 = () => {
           <Route path="/Hrlogin" component={Hrlogin}/>
           <Route path="/Login" component={Login}/>
           <Protect path="/Employe" component={Employe}/>
+          <Protect path="/EmployeRegister" component={EmployeRegister}/>
+          <Protect path="/Hremploye" component={Hremploye}/>
+
+
           <Route path="/Admin">
             <Admin/>
           </Route>

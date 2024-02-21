@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Carousel from 'react-bootstrap/Carousel';
+import {Link}  from 'react-router-dom'
+
 
 const Hr = () => {
   return (
@@ -64,7 +66,10 @@ const Hr = () => {
 
   <div className='hr-card24'>
   <img style={{height:"50px"}} src="images\icon-4.png"/>
+<Link to="/Hrlogin" >
    <h1 className='hr-head20'>Recruiting</h1>
+   </Link>
+   
    <p className='hr-para20'>Painlessly manage goals, performance reviews, calibration, and compensation.</p>
   <h1 className='hr-head21'>Learn More</h1>
   </div>  
@@ -75,10 +80,6 @@ const Hr = () => {
    <p className='hr-para20'>Hourly employees can easily clock in and out, and their hours automatically sync.</p>
   <h1 className='hr-head21'>Learn More</h1>
   </div>
-
-
-
-
 
 </div>
 

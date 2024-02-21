@@ -19,11 +19,16 @@ const Register = (props) => {
 
   const handleSubmit = (event) =>{
   event.preventDefault();
+  if (Name,Jobposition,JobExperience,Location,currentSalary,country,email,Contactnumber,Howknow.length <= ""){
+    alert("please fill all ")
+  }else{
   axios.post('http://localhost:8081/create', { Name,Jobposition,JobExperience,Location,currentSalary,country,email,Contactnumber,Howknow})
-
   .then(res =>{
     console.log(res);
   }).catch(err => console.log(err));
+
+  //null data in after register in frontpage
+
   setName("")
   seJobposition("")
   setJobExperience("")
@@ -38,7 +43,7 @@ const Register = (props) => {
 
 
 }
-
+}
   return (
    
     < >

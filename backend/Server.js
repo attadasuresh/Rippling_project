@@ -2,13 +2,14 @@ const express = require ("express");
 const cors = require ("cors");
 const mysql = require ("mysql");
 
-
-
 const app = express();
 
 app.use(express.json());
 
 app.use(cors());
+
+
+
 
 
 const db = mysql.createConnection({
@@ -29,11 +30,53 @@ app.get("/",(req,res)=>{
     })
 })
 
+//employehr code 
+
+
+app.get("/getemploye",(req,res)=>{
+ 
+    const sql = "SELECT * FROM employe";
+    db.query(sql, (err, data)=>{
+ if(err)
+    return res.json("Error");
+    return res.json(data);
+ 
+    })
+})
+
+//interview code 
+
+
+app.get("/interviewdatapath",(req,res)=>{
+ 
+    const sql = "SELECT * FROM interviewdata";
+    db.query(sql, (err, data)=>{
+ if(err)
+    return res.json("Error");
+    return res.json(data);
+ 
+    })
+})
+
+
 
 
 app.delete('/student/:id',(req,res)=>{
  
     const sql = "DELETE FROM student WHERE ID = ?";
+    const id = req.params.id;
+    db.query(sql, [id], (err, data)=>{
+ if(err) return res.json("Error");
+    return res.json(data);
+    })
+})
+
+
+ //delete interview data  item 
+
+app.delete('/deletinterview/:id',(req,res)=>{
+ 
+    const sql = "DELETE FROM interviewdata WHERE ID = ?";
     const id = req.params.id;
     db.query(sql, [id], (err, data)=>{
  if(err) return res.json("Error");
@@ -61,7 +104,7 @@ app.post('/login',(req,res)=>{
    
 })
 
-
+//register data
 
 app.post('/create',(req,res) =>{
     const sql = "INSERT INTO student  (`Name`,`Jobposition`,`JobExperience`,`Location`,`currentSalary`,`country`,`email`,`contactNumber`,`howknow`) VALUES (?) ";
@@ -83,9 +126,57 @@ db.query(sql,[values],(err,data)=>{
     if(err) return res.json(err);
     return res.json(data);
 })
+})
+
+
+// Employee register data
+
+app.post('/employe',(req,res)=>{
+
+    const {name,userid,jobposition,location,dateofbirth,email,number,address} = req.body
+    const sql = "INSERT INTO employe  (`name`,`userid`,`jobposition`,`location`,`dateofbirth`,`email`,`number`,`address`) VALUES (?) ";
+
+     db.query(sql,[[name,userid,jobposition,location,dateofbirth,email,number,address]],(err,data)=>{
+        if (err) return res.json(err);
+        return res.json(data)
+     })
+})
+
+
+
+
+
+app.post('/interviewdata',(req,res)=>{
+
+sql = "INSERT INTO interviewdata  (`Name`,`Jobposition`,`JobExperience`,`Location`,`currentSalary`,`country`,`email`,`contactNumber`,`howknow`) VALUES(?) ";
+
+const values = [
+
+   req.body.Name,
+   req.body.Jobposition,
+   req.body.JobExperience,
+   req.body.Location,
+   req.body.currentSalary,
+   req.body.country,
+   req.body.email,
+   req.body.contactNumber,
+   req.body.howknow,
+]
+ db.query(sql,[values],(err,data)=>{
+  if(err) return res.json(err);
+  return res.json(data);
+
+
+ })
 
 
 })
+
+
+
+
+
+
 
 
 
