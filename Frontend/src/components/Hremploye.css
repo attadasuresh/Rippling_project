@@ -17,8 +17,15 @@
     box-shadow: 0 2px 8px 0 rgba(8, 7, 7, 0.2), 0 4px 20px 0 rgba(24, 16, 16, 0.555);
     border: none;
     margin: 40px;
-  
 }
+
+.Hre-button1:hover{
+    background-color:#f5d02d;
+    transition: .5s;
+    color: rgb(32, 32, 32);
+
+}
+
 
 .Hre-card1{
     text-align: center;

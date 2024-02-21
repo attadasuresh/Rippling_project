@@ -71,6 +71,22 @@ app.delete('/student/:id',(req,res)=>{
     })
 })
 
+ //delete employee data  item 
+
+app.delete('/employedelet/:id',(req,res)=>{
+ 
+    const sql = "DELETE FROM employe WHERE ID = ?";
+    const id = req.params.id;
+    db.query(sql, [id], (err, data)=>{
+ if(err) return res.json("Error");
+    return res.json(data);
+    })
+})
+
+
+
+
+
 
  //delete interview data  item 
 

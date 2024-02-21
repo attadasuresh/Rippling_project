@@ -5,6 +5,8 @@ import {Link}  from 'react-router-dom'
 
 const Hremploye = () => {
 
+  //GET DATA FROM REGISTERFORM
+
   const [employe,setEmploye]=useState([])
 
   useEffect(()=>{
@@ -12,27 +14,31 @@ const Hremploye = () => {
     .then(res=>{
       setEmploye(res.data)})
     .catch(err=>console.log(err));
-
   },[])
 console.log(employe);
+
+
+
+
   return (
    <>
 
   <div>
-
-<ul>
+  <ul>
   <h1 className='Hre-head1'>EMPLOYEE DATA</h1>
-<div className='Hre-card1'>
+
+  <div className='Hre-card1'>
   <button className='Hre-button1'>TOTAL - EMPLOYES<p>0</p></button>
   <button className='Hre-button1'>PRESENT - EMPLOYES<p>0</p></button>
   <button className='Hre-button1'>ABSENT - EMPLOYES<p>0</p></button>
-  <button className='Hre-button1'>EMPLOYES - DETAILS <p>{employe.length}</p></button>
+  <button className='Hre-button1' >EMPLOYES - DETAILS <p>{employe.length}</p></button>
   </div>
    
-  
-<Link to='/EmployeRegister' className='Hre-head2'>ADD - EMPLOYEE </Link>
-<div  className='Hre-table1'>
-<table>
+  <Link to='/EmployeRegister' className='Hre-head2'>ADD - EMPLOYEE </Link>
+
+  <div  className='Hre-table1'>
+  <table>
+
   <tr>
     <th>NAME</th>
     <th>EMPLOYE ID</th>
@@ -43,11 +49,12 @@ console.log(employe);
     <th>NUMBER</th>
     <th>ADDRESS</th>
     <th>ACTIONS</th>
-
-
   </tr>
+
+
   {
 employe.map((data)=>(
+
   <tr>
     <td>{data.name}</td>
     <td>{data.userid}</td>
@@ -57,35 +64,34 @@ employe.map((data)=>(
     <td>{data.email}</td>
     <td>{data.number}</td>
     <td>{data.address}</td>
-     <td><button className='Hre-button3'>DELETE</button></td>  
+     <td><button className='Hre-button3' type='button' onClick={e =>deletHandler(data.id)}  >DELETE</button></td> 
 
   </tr>
+
 ))}
 </table>
 </div>
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
 </ul>
-
-
-
   </div>
+
    
    
    </>
   )
 }
+
+      // DELETE BUTTON
+
+      const deletHandler = async (id) =>{
+        try{
+          await axios.delete('http://localhost:8081/employedelet/'+id)
+          console.log(id)
+          window.location.reload()
+        }catch(err){
+          console.log(err);
+        }}
+
+
+
 
 export default Hremploye
