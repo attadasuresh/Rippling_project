@@ -1,0 +1,59 @@
+.Hre-head1{
+   font-size: 30px;
+   font-family: "roboto";
+   font-weight: bold;
+   margin-top: 20px;
+   text-align: center;
+}
+.Hre-button1{
+    background-color:#0088cc;
+    height: 70px;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding-top: 10px;
+    font-size: 18px;
+    box-shadow: 0 2px 8px 0 rgba(8, 7, 7, 0.2), 0 4px 20px 0 rgba(24, 16, 16, 0.555);
+    border: none;
+    margin: 40px;
+  
+}
+
+.Hre-card1{
+    text-align: center;
+}
+.Hre-span1{
+margin: 20px;
+}
+.Hre-table1{
+   border: 2px solid black;
+   padding: 20px;
+   border-radius: 10px;
+   margin-top: 20px;
+
+}
+th{
+    padding: 25px;
+}
+td{
+    padding: 25px;
+}
+.Hre-button3{
+    background-color:rgb(240, 40, 40);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 2px 8px 0 rgba(8, 7, 7, 0.2), 0 4px 20px 0 rgba(24, 16, 16, 0.555);
+    border: none;
+ 
+
+
+}
+.Hre-head2{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: roboto;
+    text-decoration: none;
+}
