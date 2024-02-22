@@ -21,6 +21,8 @@ import Protect from './Protect';
 import Hrlogin from './Hrlogin'
 import EmployeRegister from './EmployeRegister'
 import Hremploye from './Hremploye'
+import Attendance from './Attendance'
+
 
 
 import {
@@ -78,8 +80,8 @@ const Navbar1 = () => {
             <span style={{marginLeft:"53px",fontSize:"20px",fontWeight:"bold",fontFamily:"roboto"}}>
             <NavDropdown   title= <span className='tittle1'>Customers </span>  id="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link}to={"/Customers"}>Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
+              <NavDropdown.Item  as={Link}to={"/Attendance"}>
+              Attendance
               </NavDropdown.Item>
               <NavDropdown.Item   as={Link}to={"/Register"}>Register</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -88,7 +90,6 @@ const Navbar1 = () => {
               </NavDropdown.Item>
             </NavDropdown>
             </span>
-
             <span style={{marginLeft:"30px",fontSize:"20px",fontWeight:"bold",fontFamily:"roboto"}}>
             <NavDropdown  title= <span className='tittle1'>HR LOGIN</span>     id="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link}to={"/Resources"}>Action</NavDropdown.Item>
@@ -143,6 +144,8 @@ const Navbar1 = () => {
           <Route path="/Resources">
             <Resources />
           </Route>
+          
+          <Route path="/Attendance" component={Attendance}/>
 
           <Route path="/Hrlogin" component={Hrlogin}/>
           <Route path="/Login" component={Login}/>

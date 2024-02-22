@@ -102,8 +102,7 @@ const Employe = () => {
     }
   }
 
-
-  //GET APPLICATION DATA
+  //GET APPLICATION DATA    
 
  useEffect(()=>{
     axios.get('http://localhost:8081/')

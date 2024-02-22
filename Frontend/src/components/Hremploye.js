@@ -15,7 +15,7 @@ const Hremploye = () => {
       setEmploye(res.data)})
     .catch(err=>console.log(err));
   },[])
-console.log(employe);
+  console.log(employe);
 
 
 
